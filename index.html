@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search</title>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="search.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h3 class="text-center">Search......</h3>
+		</div> 
+		<hr />
+		<div class="container">
+			
+				<div class="row">
+					<div class="col-md-5">
+						<input type="text" id="search" name="search" class="form-control" required />
+					</div>
+					<div class="col-md-2">
+						<select class="form-control" id="data" name="data" required>
+							<option value="small">Datasize-small</option>
+							<option value="medium">Datasize-medium</option>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<select class="form-control" id="type" name="type" required>
+							<option value="linear">Linear</option>
+							<option value="Binary">Binary</option>
+						</select>
+					</div>
+					<button class="col-md-2 btn btn-primary" onclick="search()">Search</button>
+				</div>
+			
+		</div>
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="algorithms/linear_search.js"></script>
+	</body>
+</html>
