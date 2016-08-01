@@ -3,7 +3,8 @@
 	<head>
 		<title>Search</title>
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-		<script type="text/javascript" src="search.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -11,12 +12,11 @@
 		</div> 
 		<hr />
 		<div class="container">
-			
 				<div class="row">
 					<div class="col-md-5">
 						<input type="text" id="search" name="search" class="form-control" required />
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-2 hide">
 						<select class="form-control" id="data" name="data" required>
 							<option value="small">Datasize-small</option>
 							<option value="medium">Datasize-medium</option>
@@ -25,18 +25,36 @@
 					<div class="col-md-3">
 						<select class="form-control" id="type" name="type" required>
 							<option value="linear">Linear</option>
-							<option value="Binary">Binary</option>
+							<option value="binary">Binary</option>
+						</select>
+					</div>
+					<div class="col-md-2 for-linear">
+						<select class="form-control" id="data_sorted" name="data-sorted" required>
+							<option value="ordered">Ordered</option>
+							<option value="unordered">Unordered</option>
 						</select>
 					</div>
 					<button class="col-md-2 btn btn-primary" onclick="search()">Search</button>
 				</div>
-			
+				
+				<hr />
+				<div class="row figures array">
+					<h4>Unordered Array: [2,10,32,11,35,755,21234,87623,123,5674,12367,123298,1,236]</h4>
+					<h4>Ordered: [1, 2, 10, 11, 32, 35, 123, 236, 755, 5674, 12367, 21234, 87623, 123298]</h4>
+
+					<br />
+					<hr />
+					<h4 class="answer"></h4>
+				</div>
+
 		</div>
 
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-		
+		<script type="text/javascript" src="search.js"></script>
 		<script type="text/javascript" src="algorithms/linear_search.js"></script>
+		
+
 	</body>
 </html>
