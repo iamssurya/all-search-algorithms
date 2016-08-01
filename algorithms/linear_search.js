@@ -1,12 +1,8 @@
 /* Linear Search  */
 
 var linearSearch = function(search_string,data_type,data_sorted,data){
-	console.log('linear searching data:'+search_string+' : '+data);
-
-	console.log(data_sorted);
 	if(data_sorted == 'ordered'){
 		for(var i=0;i<data.length;i++){
-			console.log('comparing '+search_string+': '+data[i]);
 			if(parseInt(search_string) === data[i]){
 				return {
 					'data':i,

@@ -1,12 +1,10 @@
 $('#type').change(function(){
-	console.log($('#type').val());
 	switch($('#type').val()){
 		case 'linear':
 			$('.array').removeClass('hide');
 	}
 });
 var search = function(){
-	console.log('searching '+$('#search').val()+' with '+$('#type').val()+' search');
 	var start = new Date().getTime();
 	var search_type=$('#type').val(),
 		search_string=$('#search').val(),
@@ -32,7 +30,6 @@ var search = function(){
 	switch(search_type){
 		case 'linear':
 			data_source = array_data.slice();
-			console.log(data_source);
 			data_type='array';
 			
 			var result = linearSearch(search_string,data_type,data_sorted,data_source);
