@@ -2,6 +2,12 @@ $('#type').change(function(){
 	switch($('#type').val()){
 		case 'linear':
 			$('.array').removeClass('hide');
+			$('.for').removeClass('show').addClass('hide');
+			$('.for-linear').removeClass('hide').addClass('show');
+			break;
+		case 'binary':
+			$('.for').removeClass('show').addClass('hide');
+			$('.for-binary').removeClass('hide').addClass('show');
 	}
 });
 var search = function(){
@@ -34,10 +40,13 @@ var search = function(){
 			
 			var result = linearSearch(search_string,data_type,data_sorted,data_source);
 			break;
+		case 'binary':
+			var result = binarySearch(search_string,array_data.sort(function(a,b){ return a-b; }));
+			break;
 	}
 	var milliseconds = result.time - start;
 	var exec_time = milliseconds/1000;
-
+	console.log(result);
 	$('.answer').empty();
 	if(result != -1){
 		$('.answer').append('Found the searched string at '+parseInt(result.data+1)+' position');
